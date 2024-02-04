@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rental Price Reasonableness Check</title>
+</head>
+<body>
+    <h2>Rental Price Reasonableness Check</h2>
+    <form action="/predict" method="post">
+        <label for="rent_numeric">Rent:</label>
+        <input type="text" id="rent_numeric" name="rent_numeric" required><br><br>
+        
+        <label for="suburb">Suburb:</label>
+        <input type="text" id="suburb" name="suburb" required><br><br>
+
+        <label for="post_code">Post Code:</label>
+        <input type="text" id="post_code" name="post_code" required><br><br>
+
+        <label for="beds">Beds:</label>
+        <input type="number" id="beds" name="beds" required><br><br>
+        
+        <label for="baths">Baths:</label>
+        <input type="number" id="baths" name="baths" required><br><br>
+        
+        <label for="parking">Parking:</label>
+        <input type="number" id="parking" name="parking" required><br><br>
+        
+        <label for="days_listed">Days Listed:</label>
+        <input type="number" id="days_listed" name="days_listed" required><br><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <div>Prediction Result: <span id="overall_reasonableness">{{ prediction_text }}</span></div>
+</body>
+</html>
+
